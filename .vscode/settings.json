@@ -1,0 +1,11 @@
+{
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    },
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Suyash Tiwari\\Desktop\\mysql-connector-j-9.2.0.jar"
+    ]
+}
