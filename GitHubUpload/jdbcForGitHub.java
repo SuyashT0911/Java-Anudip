@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-public class jdbcExample {
+public class jdbcForGitHub {
     
     private static final String URL = "jdbc:mysql://localhost:3306/my_db";
     private static final String USER = "root";

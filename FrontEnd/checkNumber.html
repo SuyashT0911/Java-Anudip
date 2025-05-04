@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Check Number Assignment</title>
+  <link rel="stylesheet" href="checkNumber.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check Number Assignment</h1>
+    <button onclick="checkNumberPrompt()">Check Number</button>
+  </div>
+
+  <script>
+    function checkNumber(num) {
+      if (num > 0) {
+        alert("Positive number.");
+      } else if (num < 0) {
+        alert("Negative number.");
+      } else if (num === 0) {
+        alert("The number is zero.");
+      } else {
+        alert("Invalid input.");
+      }
+    }
+
+    function checkNumberPrompt() {
+      const input = prompt("Enter a number:");
+      const number = Number(input);
+      if (!isNaN(number)) {
+        checkNumber(number);
+      } else {
+        alert("Please enter a valid number.");
+      }
+    }
+  </script>
+</body>
+</html>

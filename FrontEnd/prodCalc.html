@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Online Items and Prices</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      margin: 0;
+    }
+    .form-container {
+      background-color: #f4f4f4;
+      padding: 25px;
+      border-radius: 0 0 10px 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      text-align: left;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .total {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sample Online Items and Prices</h1>
+
+  <div class="form-container">
+    <form id="priceForm">
+      <label for="laptop">Laptop ($800 each):</label>
+      <input type="number" id="laptop" name="laptop" min="0" value="0">
+
+      <label for="smartphone">Smartphone ($400 each):</label>
+      <input type="number" id="smartphone" name="smartphone" min="0" value="0">
+
+      <label for="headphones">Headphones ($50 each):</label>
+      <input type="number" id="headphones" name="headphones" min="0" value="0">
+
+      <label for="tablet">Tablet ($300 each):</label>
+      <input type="number" id="tablet" name="tablet" min="0" value="0">
+
+      <button type="button" onclick="calculateTotal()">Calculate Total Price</button>
+    </form>
+  </div>
+
+  <div class="total" id="totalPrice">Total Price: $0</div>
+
+  <script>
+    function calculateTotal() {
+      // Get quantities from inputs
+      const laptopQty = parseInt(document.getElementById("laptop").value) || 0;
+      const smartphoneQty = parseInt(document.getElementById("smartphone").value) || 0;
+      const headphonesQty = parseInt(document.getElementById("headphones").value) || 0;
+      const tabletQty = parseInt(document.getElementById("tablet").value) || 0;
+
+      // Item prices
+      const laptopPrice = 800;
+      const smartphonePrice = 400;
+      const headphonesPrice = 50;
+      const tabletPrice = 300;
+
+      // Calculate total
+      const total = (laptopQty * laptopPrice) + 
+                    (smartphoneQty * smartphonePrice) + 
+                    (headphonesQty * headphonesPrice) + 
+                    (tabletQty * tabletPrice);
+
+      // Show total
+      document.getElementById("totalPrice").textContent = "Total Price: $" + total;
+    }
+  </script>
+
+</body>
+</html>

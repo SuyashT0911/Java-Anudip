@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Info</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="user-info-container">
+    <!-- Content will be inserted dynamically -->
+  </div>
+
+  <script>
+    const user = {
+      name: "John Doe",
+      age: 25,
+      email: "john.doe@example.com"
+    };
+
+    const container = document.getElementById("user-info-container");
+
+    const heading = document.createElement("h1");
+    heading.textContent = "User Information";
+    heading.className = "title";
+    container.appendChild(heading);
+
+    const namePara = document.createElement("p");
+    namePara.textContent = "Name: " + user.name;
+    container.appendChild(namePara);
+
+    const agePara = document.createElement("p");
+    agePara.textContent = "Age: " + user.age;
+    container.appendChild(agePara);
+
+    const emailPara = document.createElement("p");
+    emailPara.textContent = "Email: " + user.email;
+    container.appendChild(emailPara);
+  </script>
+</body>
+</html>

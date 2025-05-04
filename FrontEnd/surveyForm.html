@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <style>
+    body {
+      background-color: #eee;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background-color: #fff;
+      width: 400px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: blue;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    small {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Survey Form</h1>
+    
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="number" placeholder="Enter your age" required>
+      </div>
+
+      <div class="form-group">
+        <select>
+          <option value="student">Student</option>
+          <option value="professional">Professional</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Would you recommend this survey form to a friend?</label>
+        <input type="radio" name="recommend" value="yes"> Yes
+        <br>
+        <input type="radio" name="recommend" value="no"> No
+        <br>
+        <input type="radio" name="recommend" value="maybe"> Maybe
+      </div>
+
+      <div class="form-group">
+        <label>Languages and Frameworks known <small>(Check all that apply)</small></label>
+        <input type="checkbox" name="lang" value="java"> Java <br>
+        <input type="checkbox" name="lang" value="python"> Python <br>
+        <input type="checkbox" name="lang" value="react"> React <br>
+        <input type="checkbox" name="lang" value="angular"> Angular <br>
+        <input type="checkbox" name="lang" value="spring"> Spring
+      </div>
+
+      <div class="form-group">
+        <label>Any comments or suggestions</label>
+        <textarea rows="3" placeholder="Your message here..."></textarea>
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+</body>
+</html>
